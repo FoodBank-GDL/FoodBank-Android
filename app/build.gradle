@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.emilio.foodbank"
+        applicationId "com.foodbank.foodbank"
         minSdk 26
         targetSdk 32
         versionCode 1
