@@ -1,4 +1,4 @@
-package com.emilio.foodbank
+package com.foodbank.foodbank
 
 import org.junit.Test
 

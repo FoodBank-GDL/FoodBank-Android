@@ -1,4 +1,4 @@
-package com.emilio.foodbank.ui.home
+package com.foodbank.foodbank.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.emilio.foodbank.databinding.FragmentHomeBinding
+import com.foodbank.foodbank.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 

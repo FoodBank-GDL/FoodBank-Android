@@ -1,4 +1,4 @@
-package com.emilio.foodbank
+package com.foodbank.foodbank
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -7,7 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.emilio.foodbank.databinding.ActivityMainBinding
+import com.foodbank.foodbank.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
