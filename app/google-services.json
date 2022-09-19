@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "59102412508",
+    "project_id": "foodbank-manager",
+    "storage_bucket": "foodbank-manager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59102412508:android:250a030005f0c79d387e19",
+        "android_client_info": {
+          "package_name": "com.foodbank.foodbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59102412508-o3hhv8aov3694crpv7u0si4sga1kqj6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbxCCG6ySEibUJce_xUdO36f-Gz4958Rk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "59102412508-o3hhv8aov3694crpv7u0si4sga1kqj6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
