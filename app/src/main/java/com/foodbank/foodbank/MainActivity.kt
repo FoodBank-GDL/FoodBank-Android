@@ -1,5 +1,6 @@
 package com.foodbank.foodbank
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -31,5 +32,9 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        //Esto lo use para poder ejecutar el register como la 'primera' actividad
+        //val intent= Intent(this, RegisterUserAct::class.java)
+        //startActivity(intent)
     }
 }

@@ -14,7 +14,10 @@
         android:theme="@style/Theme.FoodBank"
         tools:targetApi="31">
         <activity
-            android:name="com.foodbank.foodbank.MainActivity"
+            android:name=".RegisterUserAct"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
