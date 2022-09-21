@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         //Esto lo use para poder ejecutar el register como la 'primera' actividad
-        //val intent= Intent(this, RegisterUserAct::class.java)
-        //startActivity(intent)
+        val intent= Intent(this, RegisterUserAct::class.java)
+        startActivity(intent)
     }
 }
