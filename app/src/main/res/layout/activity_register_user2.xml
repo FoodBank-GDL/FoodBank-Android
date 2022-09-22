@@ -35,8 +35,8 @@
         android:textColor="#59000000"
         android:textColorHint="#59000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/registerPasswordConfirmEditText"
         app:layout_constraintTop_toBottomOf="@+id/registerPasswordConfirmEditText" />
 
     <EditText
@@ -53,8 +53,8 @@
         android:textColor="#59000000"
         android:textColorHint="#59000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/registerPasswordEditText"
         app:layout_constraintTop_toBottomOf="@+id/registerPasswordEditText" />
 
     <EditText
@@ -71,8 +71,8 @@
 
         android:textColorHint="#59000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/registerEmailEditText"
         app:layout_constraintTop_toBottomOf="@+id/registerEmailEditText" />
 
     <EditText
@@ -88,8 +88,8 @@
         android:textColor="#59000000"
         android:textColorHint="#59000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/secondaryRegisterText"
         app:layout_constraintTop_toBottomOf="@+id/secondaryRegisterText" />
 
     <EditText
@@ -106,8 +106,8 @@
         android:textColor="#59000000"
         android:textColorHint="#59000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/registerNameEditText"
         app:layout_constraintTop_toBottomOf="@+id/registerNameEditText" />
 
     <Button
@@ -138,23 +138,25 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="388dp"
-        android:layout_height="375dp"
-        android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toBottomOf="@+id/registerPasswordEditText"
+        android:layout_width="300dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/foodbanklogo" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_foodbank_logo" />
 
     <TextView
         android:id="@+id/secondaryRegisterText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="4dp"
         android:text="Llena los campos para continuar"
         android:textColor="#59000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/registroText"
         app:layout_constraintTop_toBottomOf="@+id/registroText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
