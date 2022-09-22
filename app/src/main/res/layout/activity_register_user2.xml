@@ -47,9 +47,9 @@
         android:ems="10"
         android:foregroundTint="#59000000"
         android:hint="Confirmar Contraseña"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
+        android:inputType="textPassword"
 
+        android:minHeight="48dp"
         android:textColor="#59000000"
         android:textColorHint="#59000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +65,7 @@
         android:ems="10"
         android:foregroundTint="#59000000"
         android:hint="Contraseña"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|textPassword"
         android:minHeight="48dp"
         android:textColor="#59000000"
 
@@ -159,4 +159,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/registroText"
         app:layout_constraintTop_toBottomOf="@+id/registroText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
