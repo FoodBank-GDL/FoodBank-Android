@@ -9,6 +9,8 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class RegisterUserAct : AppCompatActivity() {
@@ -53,10 +55,30 @@ class RegisterUserAct : AppCompatActivity() {
             { resultado ->
                 if (resultado.isSuccessful)
                 {
-                    Toast.makeText(this, "REGISTRO EXITOSO", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, "REGISTRO EXITOSO", Toast.LENGTH_SHORT).show()
+                    val nuevoUsuario= hashMapOf("nombre" to registerFullName.text.toString(),
+                        "telefono" to registerCellphone.text.toString(),
+                        "email" to registerEmail.text.toString())
+
+                    val coleccion: CollectionReference =
+                        Firebase.firestore.collection("usuarios")
+
+                    val taskAdd=coleccion.add(nuevoUsuario)
+                    taskAdd.addOnSuccessListener { doc->
+                        //Toast.makeText(this, "id: ${doc.id}", Toast.LENGTH_SHORT).show()
+
+                        //Aqui es donde ya se hizo todo al 100 y nos podemos ir al login
+
+                    }.addOnFailureListener{error ->
+                        //Toast.makeText(this, "ERROR AL GUARDAR REGISTRO", Toast.LENGTH_SHORT).show()
+                        Log.e("Firestore","error $error")
+
+
+                    }
+
                 } else
                 {
-                    Toast.makeText(this, "ERROR EN REGISTRO", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, "ERROR EN REGISTRO", Toast.LENGTH_SHORT).show()
                     Log.wtf("FIREBASE-DEV", "error: ${resultado.exception}")
 
                 }
@@ -71,6 +93,7 @@ class RegisterUserAct : AppCompatActivity() {
         }
 
     }
+
 
 
 
