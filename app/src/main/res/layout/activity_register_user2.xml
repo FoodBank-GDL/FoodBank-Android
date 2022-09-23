@@ -7,6 +7,18 @@
     android:background="#FFFFFF"
     tools:context=".RegisterUserAct">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_foodbank_logo" />
+
     <TextView
         android:id="@+id/registroText"
         android:layout_width="wrap_content"
@@ -21,68 +33,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/registerNameEditText"
+    <TextView
+        android:id="@+id/secondaryRegisterText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:foregroundTint="#59000000"
-        android:hint="Nombre completo"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-
+        android:layout_marginTop="4dp"
+        android:text="Llena los campos para continuar"
         android:textColor="#59000000"
-        android:textColorHint="#59000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/registerPasswordConfirmEditText"
-        app:layout_constraintTop_toBottomOf="@+id/registerPasswordConfirmEditText" />
+        app:layout_constraintStart_toStartOf="@+id/registroText"
+        app:layout_constraintTop_toBottomOf="@+id/registroText" />
 
-    <EditText
-        android:id="@+id/registerPasswordConfirmEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:foregroundTint="#59000000"
-        android:hint="Confirmar Contraseña"
-        android:inputType="textPassword"
-
-        android:minHeight="48dp"
-        android:textColor="#59000000"
-        android:textColorHint="#59000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/registerPasswordEditText"
-        app:layout_constraintTop_toBottomOf="@+id/registerPasswordEditText" />
-
-    <EditText
-        android:id="@+id/registerPasswordEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:foregroundTint="#59000000"
-        android:hint="Contraseña"
-        android:inputType="textPersonName|textPassword"
-        android:minHeight="48dp"
-        android:textColor="#59000000"
-
-        android:textColorHint="#59000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/registerEmailEditText"
-        app:layout_constraintTop_toBottomOf="@+id/registerEmailEditText" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="60dp"
+        android:layout_height="2dp"
+        app:layout_constraintStart_toStartOf="@+id/secondaryRegisterText"
+        app:layout_constraintTop_toBottomOf="@+id/secondaryRegisterText"
+        app:srcCompat="@drawable/square_design" />
 
     <EditText
         android:id="@+id/registerEmailEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:background="@drawable/input_text_selector"
         android:ems="10"
         android:foregroundTint="#59000000"
-        android:hint="usuario@gmail.com"
+        android:hint="usuario@correo.com"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="#59000000"
@@ -93,15 +72,86 @@
         app:layout_constraintTop_toBottomOf="@+id/secondaryRegisterText" />
 
     <EditText
-        android:id="@+id/registerPhoneEditText"
+        android:id="@+id/registerPasswordEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/input_text_selector"
         android:ems="10"
         android:foregroundTint="#59000000"
-        android:hint="Número de teléfono"
+        android:hint="Contraseña"
+        android:inputType="textPersonName|textPassword"
+        android:minHeight="48dp"
+
+        android:textColor="#59000000"
+        android:textColorHint="#59000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/registerEmailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/registerEmailEditText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Utiliza ocho caracteres como mínimo con una combinación de letras, números y símbolos"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/registerPasswordEditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/registerPasswordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/registerPasswordEditText" />
+
+    <EditText
+        android:id="@+id/registerPasswordConfirmEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_text_selector"
+        android:ems="10"
+        android:foregroundTint="#59000000"
+
+        android:hint="Confirmar Contraseña"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="#59000000"
+        android:textColorHint="#59000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/registerPasswordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/registerNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_text_selector"
+        android:ems="10"
+        android:foregroundTint="#59000000"
+        android:hint="Nombre completo"
         android:inputType="textPersonName"
 
+        android:minHeight="48dp"
+        android:textColor="#59000000"
+        android:textColorHint="#59000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/registerPasswordConfirmEditText"
+        app:layout_constraintTop_toBottomOf="@+id/registerPasswordConfirmEditText" />
+
+    <EditText
+        android:id="@+id/registerPhoneEditText"
+        style="a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_text_selector"
+        android:ems="10"
+        android:foregroundTint="#59000000"
+
+        android:hint="Número de teléfono"
+        android:inputType="phone"
         android:minHeight="48dp"
         android:textColor="#59000000"
         android:textColorHint="#59000000"
@@ -114,50 +164,37 @@
         android:id="@+id/registerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="#FF9900"
+        android:layout_marginTop="4dp"
+        android:enabled="false"
         android:onClick="registrarUsuario"
         android:text="¡Registrate!"
+        app:layout_constraintBottom_toTopOf="@+id/bottomSquare"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerPhoneEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/registerPhoneEditText"
+        app:layout_constraintVertical_bias="0.216" />
 
     <TextView
         android:id="@+id/yaTienesCuentaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:foregroundTint="#FF5722"
         android:text="¿Ya tienes cuenta? Login"
         android:textColor="#FF9900"
+        app:layout_constraintBottom_toTopOf="@+id/bottomSquare"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/registerBtn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="93dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="36dp"
+        android:id="@+id/bottomSquare"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_foodbank_logo" />
-
-    <TextView
-        android:id="@+id/secondaryRegisterText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Llena los campos para continuar"
-        android:textColor="#59000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/registroText"
-        app:layout_constraintTop_toBottomOf="@+id/registroText" />
+        app:srcCompat="@drawable/square_design" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

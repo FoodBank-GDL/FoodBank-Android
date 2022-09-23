@@ -3,8 +3,11 @@ package com.foodbank.foodbank
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -21,7 +24,7 @@ class RegisterUserAct : AppCompatActivity() {
     lateinit var registerCellphone:EditText
     lateinit var yaTienesCuentaText: TextView
     lateinit var secondaryRegisterTxt:TextView
-
+    lateinit var registerButton : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,12 +37,28 @@ class RegisterUserAct : AppCompatActivity() {
         registerCellphone=findViewById(R.id.registerPhoneEditText)
         yaTienesCuentaText=findViewById(R.id.yaTienesCuentaTextView)
         secondaryRegisterTxt=findViewById(R.id.secondaryRegisterText)
-
+        registerButton = findViewById(R.id.registerBtn)
         yaTienesCuentaText.setOnClickListener(View.OnClickListener() {
                 Toast.makeText(this, "ESTO TE DEBERIA MANDAR A LA ACTIVIDAD DE LOGIN",
                     Toast.LENGTH_SHORT).show();
 
         });
+
+        registerPasswordConfirm.addTextChangedListener(object: TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {}
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                var passwordString = registerPassword.text.toString()
+                var passwordConfirmString=registerPasswordConfirm.text.toString()
+                if (passwordString == passwordConfirmString){
+                    registerButton.isEnabled = true
+                }else{
+                    registerButton.isEnabled = false
+                }
+            }
+        })
 
 
     }
@@ -72,7 +91,6 @@ class RegisterUserAct : AppCompatActivity() {
                     }.addOnFailureListener{error ->
                         //Toast.makeText(this, "ERROR AL GUARDAR REGISTRO", Toast.LENGTH_SHORT).show()
                         Log.e("Firestore","error $error")
-
 
                     }
 
